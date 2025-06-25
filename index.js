@@ -1,7 +1,7 @@
-require('dotenv/config');
+require('dotenv').config();
 const { Client, ChannelType } = require('discord.js');
 const { OpenAI } = require('openai');
-const { keep_alive } = require('./webserver');
+// const { keep_alive } = require('./webserver');
 
 
 const client = new Client({
@@ -117,5 +117,5 @@ client.on('messageCreate', async (message) => {
     }
 });
 
-keep_alive();
+// keep_alive();
 client.login(process.env.TOKEN);
